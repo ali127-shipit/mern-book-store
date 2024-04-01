@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
 import {PORT, MongoDbUrl} from "./config.js";
-import { BooksModel } from "./model/BooksModel.js";
+
 import BookRouter from "./Routes/BookRouter.js";
 
 
@@ -11,6 +11,10 @@ import BookRouter from "./Routes/BookRouter.js";
 const app  = express();
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+
+
 
 
 
